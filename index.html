@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de Trading 2025 - Gratis con YouTube</title>
+    <meta name="description" content="Curso completo de trading desde cero dividido en 10 capítulos con los mejores videos de YouTube en español. Aprende análisis técnico, gestión de riesgo, psicología y más.">
+    <meta name="author" content="Tu Nombre o Marca">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --bg: #f9fafb;
+            --text: #1f2937;
+            --gray: #6b7280;
+            --light: #f3f4f6;
+            --border: #e5e7eb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><path d="M0,100 C200,50 400,150 600,80 C800,10 1000,100 1000,100 L1000,300 L0,300 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        h1 span {
+            display: block;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .intro {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: white;
+            margin: -3rem auto 3rem;
+            max-width: 800px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .chapters {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .chapter {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .chapter:hover {
+            transform: translateY(-5px);
+        }
+        .chapter-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .chapter-number {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--secondary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .chapter h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .chapter-objectives {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .chapter-body {
+            padding: 1.5rem;
+        }
+        .video-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .video-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .video-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .video-title:hover {
+            text-decoration: underline;
+        }
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.3rem;
+        }
+        .play-icon {
+            width: 16px;
+            height: 16px;
+            fill: var(--secondary);
+        }
+        .resources {
+            background: white;
+            padding: 3rem 1rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .resources h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        .playlist-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--light);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+        .playlist-link:hover {
+            background: var(--border);
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--light);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .intro {
+                margin: -2rem 1rem 2rem;
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curso Completo de Trading 2025<br><span>Desde Cero hasta Nivel Profesional</span></h1>
+            <div class="badge">100% GRATIS con YouTube</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <p>Aprende trading paso a paso con <strong>10 capítulos estructurados</strong> y los <strong>mejores videos de YouTube en español</strong>. Ideal para principiantes y traders intermedios desde Cajamarca o cualquier lugar.</p>
+            <p>Dedica <strong>1-2 semanas por capítulo</strong>, practica en cuenta demo y aplica lo aprendido. Actualizado a noviembre 2025.</p>
+            <div>
+                <a href="#capitulo1" class="btn">Comenzar Ahora</a>
+                <a href="#recursos" class="btn" style="background: var(--secondary);">Ver Playlist Completa</a>
+            </div>
+        </section>
+
+        <div class="warning">
+            <strong>⚠️ Advertencia:</strong> El trading conlleva riesgos. Nunca inviertas dinero que no puedas permitirte perder. Este curso es educativo; no es asesoría financiera.
+        </div>
+
+        <div class="chapters" id="capitulo1">
+            <!-- Capítulo 1 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">1</div>
+                    <h3>Introducción al Trading</h3>
+                    <div class="chapter-objectives">Conceptos básicos, diferencias con invertir y mitos comunes</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=Z-11MBl5zkA" class="video-title" target="_blank">Curso de TRADING desde CERO (Completo) - 4 horas</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Curso integral desde lo básico hasta estrategias iniciales</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=cj741D4-BtA" class="video-title" target="_blank">La única clase que necesitas para aprender todo sobre Trading</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Explicación clara y motivadora por trader experimentado</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=TdEbkTk40qQ" class="video-title" target="_blank">El Mejor Curso Gratis De Trading</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Guía paso a paso actualizada para 2025</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Resto de capítulos igual que antes... (para no alargar, copia los demás del mensaje anterior) -->
+            <!-- Capítulo 2 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">2</div>
+                    <h3>Tipos de Trading y Mercados</h3>
+                    <div class="chapter-objectives">Acciones, Forex, cripto, opciones y estilos: day trading, swing, scalping</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=cj741D4-BtA" class="video-title" target="_blank">La única clase que necesitas (sección mercados)</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Incluye tipos de mercados y estilos</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=J0fGORZP7Gg" class="video-title" target="_blank">CÓMO EMPEZAR EN TRADING 7 PASOS</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Pasos prácticos para seleccionar mercados</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=2P-e8JAMTCY" class="video-title" target="_blank">Tier List of the Best Trading Strategies for Beginners</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Ranking de estilos para principiantes</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 3 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">3</div>
+                    <h3>Análisis Técnico</h3>
+                    <div class="chapter-objectives">Gráficos, patrones, indicadores y velas japonesas</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=NloeTa0wOWM" class="video-title" target="_blank">Curso COMPLETO de Análisis Técnico para Principiantes</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Curso detallado desde cero</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=3NMdelx4IIE" class="video-title" target="_blank">El Mejor Curso Gratis De Análisis Técnico</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Enfoque práctico con ejemplos</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=4uKlIB921cE" class="video-title" target="_blank">Curso de ANÁLISIS TÉCNICO desde CERO</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Ideal para novatos con ejercicios</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 4 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">4</div>
+                    <h3>Análisis Fundamental</h3>
+                    <div class="chapter-objectives">Evaluación de empresas, economía macro y estados financieros</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=PhXyKQKW09o" class="video-title" target="_blank">Análisis Fundamental para Principiantes</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Clase exhaustiva con ejemplos reales</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=zHKkdvhiKkU" class="video-title" target="_blank">How to Evaluate Stocks Step by Step</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Paso a paso para evaluar acciones</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=Vk5_3lxJZ-8" class="video-title" target="_blank">Herramienta de Análisis Fundamental</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Tutorial de herramientas prácticas</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 5 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">5</div>
+                    <h3>Gestión de Riesgo</h3>
+                    <div class="chapter-objectives">Stop-loss, position sizing y ratio riesgo-recompensa</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=gf9uUzarFXE" class="video-title" target="_blank">Gestión del Riesgo en Trading</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Consejos para no perder todo</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=meC_Tvu-oTk" class="video-title" target="_blank">Gestión del RIESGO y PSICOLOGÍA</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Enfoque en protección diaria</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=kNjQ1GHpMeI" class="video-title" target="_blank">Cómo Gestionar el Riesgo (3 Formas)</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Tres métodos simples y efectivos</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 6 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">6</div>
+                    <h3>Psicología del Trading</h3>
+                    <div class="chapter-objectives">Control emocional, disciplina y hábitos mentales</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=I_kb84OE274" class="video-title" target="_blank">EL CAMINO MENTAL DE UN TRADER</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Sesión de psicotrading profunda</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/playlist?list=PLb-RCsoMvIAqhCwzktYgpjTIvsIPqv0Xu" class="video-title" target="_blank">Psicología del trading (Playlist)</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Serie completa de lecciones clave</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=L-ROGputkHw" class="video-title" target="_blank">La mejor entrevista sobre psicotrading</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Entrevista reveladora con expertos</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 7 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">7</div>
+                    <h3>Estrategias de Trading</h3>
+                    <div class="chapter-objectives">Breakout, trend following y mean reversion</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=lsk-WK0zypQ" class="video-title" target="_blank">The Best Trading Strategies for 2026</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Las 5 mejores para este año</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=-76alRLk8GQ" class="video-title" target="_blank">The Best Trading Strategies to Start Now</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>6 estrategias fáciles de implementar</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=aCBa0JE32zg" class="video-title" target="_blank">Mejores Estrategias para Principiantes</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Enfocado en novatos</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 8 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">8</div>
+                    <h3>Plataformas y Herramientas</h3>
+                    <div class="chapter-objectives">Brokers, MetaTrader, TradingView y apps</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=OpcSOsP_hiU" class="video-title" target="_blank">Las 6 Mejores Plataformas de Trading</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Comparativa de brokers</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=wlww45Nps9A" class="video-title" target="_blank">MEJORES 5 plataformas de TRADING</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Guía para elegir</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=U6v4MFHVMfA" class="video-title" target="_blank">TOP 11 Herramientas de TRADING 2025</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Herramientas gratuitas y premium</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 9 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">9</div>
+                    <h3>Trading en Vivo y Ejemplos</h3>
+                    <div class="chapter-objectives">Sesiones reales y análisis de trades pasados</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=hyesHYn-vqQ" class="video-title" target="_blank">+14.77% En 9 Horas | Trading En Vivo</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Día completo de trading en vivo</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/playlist?list=PLpjaj7Ba0c9GSZ98ZVuOtsYNRwyk-tOR3" class="video-title" target="_blank">Trading EN VIVO Casos Prácticos (Playlist)</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Casos prácticos paso a paso</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=x5t4t99BRrA" class="video-title" target="_blank">DAY TRADING EN VIVO - ANÁLISIS PRE-MERCADO</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Análisis pre-mercado en directo</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capítulo 10 -->
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-number">10</div>
+                    <h3>Temas Avanzados</h3>
+                    <div class="chapter-objectives">Trading algorítmico, opciones y optimización</div>
+                </div>
+                <div class="chapter-body">
+                    <ul class="video-list">
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=0Gw-nQCuN_s" class="video-title" target="_blank">Avanzarás 10 años en 15 minutos</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Consejos de expertos</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=1v4ZCZD_CI4" class="video-title" target="_blank">10 Años Haciendo Trading en 90 Minutos</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Experiencia condensada</span>
+                            </div>
+                        </li>
+                        <li class="video-item">
+                            <a href="https://www.youtube.com/watch?v=2P-e8JAMTCY" class="video-title" target="_blank">Tier List of Best Strategies (Avanzado)</a>
+                            <div class="video-meta">
+                                <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span>Estrategias avanzadas adaptadas</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="resources" id="recursos">
+            <h2>🎯 Recursos Adicionales</h2>
+            <a href="https://www.youtube.com/playlist?list=PLBiri0PzfmvY0VkJxc35DTYb-kbOQ7AwX" class="playlist-link" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                Curso completo TRADING desde 0 (2025) - Playlist Oficial
+            </a>
+            <p style="margin-top: 1.5rem; color: var(--gray);">
+                Únete a comunidades: <strong>Reddit r/trading</strong> | Practica en <strong>cuenta demo</strong> | Toma notas
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Curso creado con ❤️ para la comunidad hispanohablante de trading | Noviembre 2025</p>
+        <p>Recuerda: Educa, practica y gestiona tu riesgo. ¡Éxito en tu journey!</p>
+    </footer>
+</body>
+</html>
